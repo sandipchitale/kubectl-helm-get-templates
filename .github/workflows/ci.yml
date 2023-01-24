@@ -31,10 +31,10 @@ jobs:
       run: /bin/tar --transform 's/.*\///g' -cvzf kubectl-helm-get-templates_${{ github.ref_name }}_windows_amd64.tar.gz dist/win/bin/kubectl-helm_get_templates.exe LICENSE
     - name: Create linux archive
       id: linux_archive
-      run: /bin/tar --transform 's/.*\///g' -cvzf kubectl-helm-get-templates_${{ github.ref_name }}_linux_amd64.tar.gz dist/linux/bin/kubectl-helm-helm_get_templates LICENSE
+      run: /bin/tar --transform 's/.*\///g' -cvzf kubectl-helm-get-templates_${{ github.ref_name }}_linux_amd64.tar.gz dist/linux/bin/kubectl-helm_get_templates LICENSE
     - name: Create darwin archive
       id: darwin_archive
-      run: /bin/tar --transform 's/.*\///g' -cvzf kubectl-helm-get-templates_${{ github.ref_name }}_darwin_amd64.tar.gz dist/darwin/bin/kubectl-helm-helm_get_templates LICENSE
+      run: /bin/tar --transform 's/.*\///g' -cvzf kubectl-helm-get-templates_${{ github.ref_name }}_darwin_amd64.tar.gz dist/darwin/bin/kubectl-helm_get_templates LICENSE
     - name: Upload windows archives
       uses: actions/upload-artifact@v3
       with:
