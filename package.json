@@ -1,0 +1,47 @@
+{
+  "name": "kubectl-helm_get_templates",
+  "version": "0.0.26",
+  "description": "Kubectl plugin to run helm commands including custom commands like get templates RELEASENAME [--revision N]",
+  "license": "SEE LICENSE IN LICENCE",
+  "main": "out/main.js",
+  "bin": "out/main.js",
+  "scripts": {
+    "start": "node out/main.js",
+    "start-debug": "node --inspect-brk out/main.js",
+    "pkg-win": "npx pkg -t node16-win-x64 --out-path dist/win/bin .",
+    "pkg-linux": "npx pkg -t node16-linux-x64 --out-path dist/linux/bin .",
+    "pkg-darwin": "npx pkg -t node16-darwin-x64 --out-path dist/darwin/bin .",
+    "pkg": "npx tsc && npm run pkg-win && npm run pkg-linux && npm run pkg-darwin",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sandip Chitale <sandipchitale@gmail.com>",
+  "maintainers": [
+    "Sandip Chitale <sandipchitale@gmail.com>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sandipchitale/kubectl-helm-get-templates.git"
+  },
+  "keywords": [
+    "kubectl",
+    "plugin",
+    "helm",
+    "get templates RELEASENAME [--revision N]"
+  ],
+  "devDependencies": {
+    "@tsconfig/node18": "^1.0.1",
+    "@types/minimist": "^1.2.2",
+    "@types/node": "^18.11.18",
+    "pkg": "^5.8.0",
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "minimist": "^1.2.7"
+  },
+  "pkg": {
+    "targets": [
+      "node18-win-x64"
+    ],
+    "outputPath": "bin"
+  }
+}
